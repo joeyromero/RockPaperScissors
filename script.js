@@ -36,7 +36,14 @@ function playRound(playerChoice, computerChoice){
     };
 }
 
-const playerChoice = "rock";
-const computerChoice = getComputerChoice();
-console.log(playRound(playerChoice,computerChoice));
+function game(){
+    console.log("Welcome!")
+    for (let i = 0; i < 5; i++) {
+       const playerChoice = "rock";
+       const computerChoice = getComputerChoice();
+       console.log(playRound(playerChoice,computerChoice));
+       
+    }
+};
 
+game();
