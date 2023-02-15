@@ -3,8 +3,8 @@
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice(){
-    const choice = options[Math.floor(Math.random() * options.length)];
-    console.log(choice);
+    const choice = options[Math.floor(Math.random() * options.length)]
+    return choice;
 };
 
 function checkWinner(playerChoice, computerChoice) {
@@ -24,19 +24,19 @@ function checkWinner(playerChoice, computerChoice) {
 };
 
 function playRound(playerChoice, computerChoice){
-    const result = checkWinner(playerchoice, computerChoice);
+    const result = checkWinner(playerChoice, computerChoice);
     if(result == "tie"){
-        return 'Its a tie!'
+        return `Its a tie!`
     }
     else if(result == "Player"){
-        return 'You win! ${playerChoice} beats ${computerChoice}!'
+        return `You win! ${playerChoice} beats ${computerChoice}`
     }
     else{
-        return 'You lose. ${computerChoice} beats ${playerChoice}'
+        return `You lose. ${computerChoice} beats ${playerChoice}`
     };
 }
 
 const playerChoice = "rock";
-const computerChoice = getComputerchoice();
-console.log(playRound(playerChoice, computerChoice));
+const computerChoice = getComputerChoice();
+console.log(playRound(playerChoice,computerChoice));
 
